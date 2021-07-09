@@ -12,8 +12,6 @@ public class Server {
         int PORT = args.length > 0 ? Integer.parseInt(args[0]) : 7000;
         ServerSocket server = new ServerSocket(PORT);
         List<Socket> connections = new ArrayList<>();
-//        List<User> users = new ArrayList<>();
-//        connections.get(0).close();
         System.out.println("\uD83D\uDE80 Server listening at port " + server.getLocalPort());
         new Thread(() -> {
             while (true) {

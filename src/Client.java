@@ -19,7 +19,6 @@ public class Client {
 
         new Thread(() -> {
             boolean mustExecute = true;
-
             while (mustExecute) {
                 try {
                     String message = scanner.nextLine();
@@ -27,9 +26,6 @@ public class Client {
                         mustExecute = false;
                         outputStream.writeUTF("/exit:" + username);
                         socket.close();
-//                        outputStream.close();put
-//                        inputStream.close();
-//                        socket.close();
                         System.exit(0);
                     }
                     outputStream.writeUTF(username + ":" + message);
